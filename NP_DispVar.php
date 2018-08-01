@@ -14,8 +14,8 @@ class NP_DispVar extends NucleusPlugin
 	function getName()           {return 'DispVar';}
 	function getEventList()      {return array();}
 	function getAuthor()         {return 'Taka + cha_cya + ava + ephemera + yama';}
-	function getURL()            {return 'http://japan.nucleuscms.org/bb/viewtopic.php?p=23237';}
-	function getVersion()        {return '0.1.3';}
+	function getURL()            {return 'https://github.com/NucleusCMS/NP_DispVar';}
+	function getVersion()        {return '0.2';}
 	function supportsFeature($w) {return ($w == 'SqlTablePrefix') ? 1 : 0;}
 	function getDescription()    {return 'DispVar';}
 	
