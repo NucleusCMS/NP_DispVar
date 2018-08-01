@@ -19,15 +19,19 @@ class NP_DispVar extends NucleusPlugin
 	function supportsFeature($w) {return ($w == 'SqlTablePrefix') ? 1 : 0;}
 	function getDescription()    {return 'DispVar';}
 	
-	function doSkinVar($skinType, $mode, $varName, $specify = '')
+	function doSkinVar($skinType)
 	{
-		$str = $this->getVar($skinType, $mode, $varName, $specify, 'skin');
+		$p = func_get_args();
+		$specify = isset($p[3]) ? $p[3] : '';
+		$str = $this->getVar($skinType, $p[1], $p[2], $specify, 'skin');
 		echo $str;
 	}
 	
-	function doTemplateVar(&$item, $mode, $varName, $specify = '')
+	function doTemplateVar(&$item)
 	{
-		$str = $this->getVar($item, $mode, $varName, $specify, 'template');
+		$p = func_get_args();
+		$specify = isset($p[3]) ? $p[3] : '';
+		$str = $this->getVar($item, $p[1], $p[2], $specify, 'template');
 		echo $str;
 	}
 	
